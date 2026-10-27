@@ -1,0 +1,625 @@
+{
+  "_about": "Default WWTP design-criteria library. kind=limit -> FAIL when violated; kind=typical -> WARN when outside the textbook range. 'verified' marks values checked against the cited text when this library was built (2026-10-27); unverified values are from engineering references recalled from memory and must be confirmed before commercial release. Users can override any entry with their own JSON file.",
+  "_sources": {
+    "10SS-2014": "Recommended Standards for Wastewater Facilities (Ten States Standards), 2014 ed. NOTE: a 2026 edition has been published by GLUMRB - review for changes.",
+    "MO-10CSR20-8.160": "Missouri 10 CSR 20-8.160 Settling (adopts Ten States-derived criteria; current through 12/31/24).",
+    "MPCA-wq-wwtp5-10": "Minnesota PCA Biological Treatment Checklist (wq-wwtp5-10), Ten States-based review checklist.",
+    "SC-R61-67": "SC Regulation 61-67, Standards for Wastewater Facility Construction (SCDES).",
+    "M&E-5": "Metcalf & Eddy, Wastewater Engineering: Treatment and Resource Recovery, 5th ed. (typical ranges).",
+    "40CFR503": "40 CFR Part 503 Appendix B (PSRP/PFRP) and 503.33 vector attraction reduction.",
+    "IL-35IAC370": "Illinois 35 IAC Part 370, Illinois Recommended Standards for Sewage Works (Ten States-based).",
+    "TN-DC": "Tennessee Design Criteria for Sewage Works (Ch. 4, 2016; Ch. 10 Disinfection, rev. 07/19/2025).",
+    "OK-OAC252:656": "Oklahoma OAC 252:656 Appendix A design tables.",
+    "SC-R61-67.400": "SC R.61-67.400 Reliability Classifications."
+  },
+  "criteria": {
+    "percap_flow_gpcd": {
+      "desc": "Design average flow, new systems",
+      "unit": "gpcd",
+      "typical": 100,
+      "kind": "info",
+      "source": "10SS-2014 11.243(a)",
+      "verified": true
+    },
+    "percap_bod_lb": {
+      "desc": "Domestic BOD5 per capita (min)",
+      "unit": "lb/cap/d",
+      "typical": 0.17,
+      "kind": "info",
+      "source": "10SS-2014 11.253(a)",
+      "verified": true
+    },
+    "percap_tss_lb": {
+      "desc": "Domestic TSS per capita (min)",
+      "unit": "lb/cap/d",
+      "typical": 0.2,
+      "kind": "info",
+      "source": "10SS-2014 11.253(a)",
+      "verified": true
+    },
+    "percap_tkn_lb": {
+      "desc": "TKN per capita (nitrification required)",
+      "unit": "lb/cap/d",
+      "typical": 0.036,
+      "kind": "info",
+      "source": "10SS-2014 11.253(a)",
+      "verified": true
+    },
+    "wet_weather_eq_phf": {
+      "desc": "Consider wet-weather equalization when peak hourly : average >= ",
+      "unit": "-",
+      "max": 3.0,
+      "kind": "typical",
+      "source": "10SS-2014 11.28(c)",
+      "verified": true
+    },
+    "screen_v_openings_peak": {
+      "desc": "Velocity through bar openings at peak flow",
+      "unit": "ft/s",
+      "min": null,
+      "max": 2.5,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.610(a)",
+      "verified": true
+    },
+    "screen_clear_opening": {
+      "desc": "Mechanical bar screen clear opening (typical)",
+      "unit": "in",
+      "min": 0.25,
+      "max": 1.75,
+      "kind": "typical",
+      "source": "M&E-5 (textbook)",
+      "verified": false
+    },
+    "grit_aerated_detention": {
+      "desc": "Aerated grit detention at design peak flow",
+      "unit": "min",
+      "min": 3.0,
+      "max": 5.0,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.620(d)(2)(B) (>=3 min); TN-DC 4.2.3.3 (2-5 min)",
+      "verified": true
+    },
+    "grit_aerated_lw": {
+      "desc": "Aerated grit chamber length:width",
+      "unit": "-",
+      "min": 3.0,
+      "max": 5.0,
+      "kind": "typical",
+      "source": "OK-OAC252:656 App. A (M&E 4th)",
+      "verified": true
+    },
+    "grit_air_per_ft": {
+      "desc": "Aerated grit air supply per ft of tank length",
+      "unit": "scfm/ft",
+      "min": 3.0,
+      "max": 8.0,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.620(d)(2)(C) (5 cfm/ft); OK-OAC252:656 App. A (3-8)",
+      "verified": true
+    },
+    "eq_air_mixing": {
+      "desc": "Equalization basin air for mixing/aerobic conditions",
+      "unit": "scfm/1000 ft3",
+      "min": 10.0,
+      "max": 15.0,
+      "kind": "typical",
+      "source": "M&E-5 (0.01-0.015 m3/m3-min)",
+      "verified": false
+    },
+    "pri_sor_avg_noWAS": {
+      "desc": "Primary SOR at average flow (no WAS returned)",
+      "unit": "gpd/ft2",
+      "max": 1000,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-2",
+      "verified": true
+    },
+    "pri_sor_peak_noWAS": {
+      "desc": "Primary SOR at peak hourly flow (no WAS returned)",
+      "unit": "gpd/ft2",
+      "max": 3000,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-2",
+      "verified": true
+    },
+    "pri_sor_avg_WAS": {
+      "desc": "Primary SOR at average flow (receiving WAS)",
+      "unit": "gpd/ft2",
+      "max": 700,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-2",
+      "verified": true
+    },
+    "pri_sor_peak_WAS": {
+      "desc": "Primary SOR at peak hourly flow (receiving WAS)",
+      "unit": "gpd/ft2",
+      "max": 1700,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-2",
+      "verified": true
+    },
+    "pri_swd": {
+      "desc": "Primary clarifier side water depth (>0.1 MGD)",
+      "unit": "ft",
+      "min": 10.0,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-1",
+      "verified": true
+    },
+    "pri_hrt": {
+      "desc": "Primary clarifier detention at average flow",
+      "unit": "h",
+      "min": 1.5,
+      "max": 2.5,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "weir_lt_0.1": {
+      "desc": "Weir loading at peak hourly flow, plant < 0.1 MGD",
+      "unit": "gpd/ft",
+      "max": 10000,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-4",
+      "verified": true
+    },
+    "weir_0.1_1": {
+      "desc": "Weir loading at peak hourly flow, plant 0.1-1.0 MGD",
+      "unit": "gpd/ft",
+      "max": 20000,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-4",
+      "verified": true
+    },
+    "weir_gt_1": {
+      "desc": "Weir loading at peak hourly flow, plant > 1.0 MGD",
+      "unit": "gpd/ft",
+      "max": 30000,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-4",
+      "verified": true
+    },
+    "sec_swd": {
+      "desc": "Final clarifier side water depth (activated sludge)",
+      "unit": "ft",
+      "min": 12.0,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-1",
+      "verified": true
+    },
+    "sec_sor_peak_conventional": {
+      "desc": "Final clarifier peak hourly SOR - conventional / complete mix / step / contact stab.",
+      "unit": "gpd/ft2",
+      "max": 1200,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-3",
+      "verified": true
+    },
+    "sec_slr_peak_conventional": {
+      "desc": "Final clarifier peak solids loading - conventional",
+      "unit": "lb/d/ft2",
+      "max": 40,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-3",
+      "verified": true
+    },
+    "sec_sor_peak_nitrifying": {
+      "desc": "Final clarifier peak hourly SOR - extended aeration / single-stage nitrification",
+      "unit": "gpd/ft2",
+      "max": 1000,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-3",
+      "verified": true
+    },
+    "sec_slr_peak_nitrifying": {
+      "desc": "Final clarifier peak solids loading - extended aeration / single-stage nitrification",
+      "unit": "lb/d/ft2",
+      "max": 35,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-3",
+      "verified": true
+    },
+    "sec_sor_peak_chemP": {
+      "desc": "Final clarifier peak hourly SOR - activated sludge with chemical P removal",
+      "unit": "gpd/ft2",
+      "max": 900,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-3",
+      "verified": true
+    },
+    "sec_slr_peak_chemP": {
+      "desc": "Final clarifier peak solids loading - chemical P removal",
+      "unit": "lb/d/ft2",
+      "max": 35,
+      "kind": "limit",
+      "source": "MO-10CSR20-8.160 Table 160-3",
+      "verified": true
+    },
+    "sec_sor_avg": {
+      "desc": "Final clarifier SOR at average flow (upper typical)",
+      "unit": "gpd/ft2",
+      "min": null,
+      "max": 800,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "as_do": {
+      "desc": "Minimum dissolved oxygen in aeration basin",
+      "unit": "mg/L",
+      "min": 2.0,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_depth": {
+      "desc": "Aeration tank liquid depth",
+      "unit": "ft",
+      "min": 10.0,
+      "max": 30.0,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_o2_per_bod": {
+      "desc": "Minimum O2 supply per lb peak BOD5 (conventional)",
+      "unit": "lb O2/lb BOD5",
+      "min": 1.1,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_o2_per_bod_ext": {
+      "desc": "Minimum O2 supply per lb peak BOD5 (extended aeration)",
+      "unit": "lb O2/lb BOD5",
+      "min": 1.5,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_o2_peak_factor": {
+      "desc": "Diffuser design: greater of diurnal peak O2 demand or this x average",
+      "unit": "-",
+      "min": 2.0,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_mixing_air": {
+      "desc": "Diffused-air mixing (grid systems)",
+      "unit": "scfm/1000 ft3",
+      "min": 10.0,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10 (10-15 for grid systems)",
+      "verified": true
+    },
+    "as_alpha_domestic": {
+      "desc": "Clean-to-process water transfer (domestic > 90%)",
+      "unit": "-",
+      "max": 0.5,
+      "kind": "typical",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_diffuser_headloss": {
+      "desc": "Diffuser head loss",
+      "unit": "psi",
+      "max": 0.5,
+      "kind": "limit",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_blower_inlet_temp_F": {
+      "desc": "Blower design inlet air temperature (high)",
+      "unit": "F",
+      "typical": 115,
+      "kind": "info",
+      "source": "MPCA-wq-wwtp5-10",
+      "verified": true
+    },
+    "as_vol_load_conventional": {
+      "desc": "Volumetric BOD5 loading - conventional/complete mix/step, plant >= 1 MGD",
+      "unit": "lb BOD5/1000 ft3/d",
+      "max": 50,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.920(d)",
+      "verified": true
+    },
+    "as_vol_load_extended": {
+      "desc": "Volumetric BOD5 loading - extended aeration / single-stage nitrification",
+      "unit": "lb BOD5/1000 ft3/d",
+      "max": 15,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.920(d)",
+      "verified": true
+    },
+    "as_fm_conventional": {
+      "desc": "F/M (lb BOD5/lb MLSS-d) - conventional",
+      "unit": "1/d",
+      "min": 0.25,
+      "max": 0.5,
+      "kind": "typical",
+      "source": "OK-OAC252:656 App. A",
+      "verified": true
+    },
+    "as_fm_extended": {
+      "desc": "F/M (lb BOD5/lb MLSS-d) - extended aeration / nitrifying",
+      "unit": "1/d",
+      "min": 0.05,
+      "max": 0.15,
+      "kind": "typical",
+      "source": "OK-OAC252:656 App. A (0.05-0.10 ext. aeration) / M&E-5",
+      "verified": true
+    },
+    "as_mlss": {
+      "desc": "MLSS (suspended growth)",
+      "unit": "mg/L",
+      "min": 1500,
+      "max": 5000,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "as_alk_residual": {
+      "desc": "Residual alkalinity after nitrification",
+      "unit": "mg/L as CaCO3",
+      "min": 70,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "as_ir_ratio": {
+      "desc": "MLE internal recycle ratio",
+      "unit": "x Q",
+      "min": 1.0,
+      "max": 5.0,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "as_anaerobic_hrt": {
+      "desc": "EBPR anaerobic zone HRT (on Q)",
+      "unit": "h",
+      "min": 0.5,
+      "max": 1.5,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "as_ras_ratio": {
+      "desc": "Return sludge rate (fraction of design average flow)",
+      "unit": "x Q",
+      "min": 0.15,
+      "max": 1.0,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.920(g)(1)",
+      "verified": true
+    },
+    "filter_rate_granular": {
+      "desc": "Filter rate at peak hourly flow, one unit out of service",
+      "unit": "gpm/ft2",
+      "max": 5.0,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.1120",
+      "verified": true
+    },
+    "filter_rate_cloth": {
+      "desc": "Cloth-media disk filter rate at peak",
+      "unit": "gpm/ft2",
+      "max": 6.5,
+      "kind": "typical",
+      "source": "Vendor typical",
+      "verified": false
+    },
+    "cl2_contact_peak": {
+      "desc": "Chlorine contact time at daily peak design flow",
+      "unit": "min",
+      "min": 15,
+      "kind": "limit",
+      "source": "TN-DC 10.2.2.4",
+      "verified": true
+    },
+    "cl2_contact_lw": {
+      "desc": "Chlorine contact chamber length:width",
+      "unit": "-",
+      "min": 30,
+      "kind": "limit",
+      "source": "TN-DC 10.2.2.5",
+      "verified": true
+    },
+    "uv_uvt": {
+      "desc": "Design UV transmittance (254 nm)",
+      "unit": "%",
+      "min": 65,
+      "kind": "limit",
+      "source": "TN-DC 10.4.2.3",
+      "verified": true
+    },
+    "thick_grav_primary_slr": {
+      "desc": "Gravity thickener solids loading - primary sludge",
+      "unit": "lb/ft2/d",
+      "min": 18,
+      "max": 31,
+      "kind": "typical",
+      "source": "M&E-5 (90-150 kg/m2-d)",
+      "verified": false
+    },
+    "thick_daf_slr": {
+      "desc": "DAF solids loading - WAS with polymer",
+      "unit": "lb/ft2/h",
+      "min": 0.4,
+      "max": 2.0,
+      "kind": "typical",
+      "source": "M&E-5",
+      "verified": false
+    },
+    "ad_srt": {
+      "desc": "Anaerobic digestion MCRT (PSRP; 15 d at 35-55 C)",
+      "unit": "d",
+      "min": 15,
+      "kind": "limit",
+      "source": "40CFR503 App. B A.3",
+      "verified": true
+    },
+    "ad_vs_load": {
+      "desc": "Anaerobic VS loading - completely mixed (empirical design)",
+      "unit": "lb VS/1000 ft3/d",
+      "min": null,
+      "max": 80,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.830 (rational SRT-based design permitted)",
+      "verified": true
+    },
+    "aer_dig_mixing_air": {
+      "desc": "Aerobic digester air supply (largest blower out)",
+      "unit": "scfm/1000 ft3",
+      "min": 30,
+      "max": null,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.840",
+      "verified": true
+    },
+    "screen_approach_v": {
+      "desc": "Screen channel approach velocity at peak (desired)",
+      "unit": "ft/s",
+      "min": 1.25,
+      "max": null,
+      "kind": "typical",
+      "source": "TN-DC 4.1.3.3",
+      "verified": true
+    },
+    "grit_channel_velocity": {
+      "desc": "Channel-type grit chamber velocity",
+      "unit": "ft/s",
+      "min": 0.9,
+      "max": 1.1,
+      "typical": 1.0,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.620(d)(1)(B); TN-DC 4.2.3.1",
+      "verified": true
+    },
+    "eq_do": {
+      "desc": "Equalization basin minimum DO",
+      "unit": "mg/L",
+      "min": 1.0,
+      "kind": "limit",
+      "source": "TN-DC 4.4.3",
+      "verified": true
+    },
+    "as_vol_load_conventional_small": {
+      "desc": "Volumetric BOD5 loading - conventional/complete mix/step, plant < 1 MGD",
+      "unit": "lb BOD5/1000 ft3/d",
+      "max": 35,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.920(d)",
+      "verified": true
+    },
+    "as_ext_hrt": {
+      "desc": "Extended aeration detention at design average flow",
+      "unit": "h",
+      "min": 24,
+      "kind": "limit",
+      "source": "IL-35IAC370 370.920(d) footnote",
+      "verified": true
+    },
+    "as_nod_factor": {
+      "desc": "Nitrogenous O2 demand per lb diurnal-peak influent NH3-N",
+      "unit": "lb O2/lb N",
+      "typical": 4.6,
+      "kind": "info",
+      "source": "IL-35IAC370 370.920(f)(1)(B)",
+      "verified": true
+    },
+    "filter_units": {
+      "desc": "Number of filter units (recommended)",
+      "unit": "units",
+      "min": 3,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.1120",
+      "verified": true
+    },
+    "cl2_contact_avg": {
+      "desc": "Chlorine contact time at average design flow",
+      "unit": "min",
+      "min": 30,
+      "kind": "limit",
+      "source": "TN-DC 10.2.2.4",
+      "verified": true
+    },
+    "uv_dose": {
+      "desc": "UV dose at peak hourly flow (end-of-lamp-life, fouled)",
+      "unit": "mJ/cm2",
+      "min": 30,
+      "kind": "limit",
+      "source": "TN-DC 10.4.2.4",
+      "verified": true
+    },
+    "ad_swd": {
+      "desc": "Anaerobic digester side water depth (recommended)",
+      "unit": "ft",
+      "min": 20,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.830",
+      "verified": true
+    },
+    "aer_dig_do": {
+      "desc": "Aerobic digester DO",
+      "unit": "mg/L",
+      "min": 1.0,
+      "max": 2.0,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.840",
+      "verified": true
+    },
+    "ps_force_main_v": {
+      "desc": "Force main velocity at design pumping rate",
+      "unit": "ft/s",
+      "min": 2.0,
+      "max": 8.0,
+      "kind": "limit",
+      "source": "10SS-2014 42.38 (min 2 ft/s); max typical 8 (textbook)",
+      "verified": true
+    },
+    "ps_wetwell_fill": {
+      "desc": "Wet well fill time at average flow",
+      "unit": "min",
+      "max": 30,
+      "kind": "limit",
+      "source": "10SS-2014 42.62",
+      "verified": true
+    },
+    "ps_cycle_time": {
+      "desc": "Pump cycle time (motor starts)",
+      "unit": "min",
+      "min": 6,
+      "kind": "typical",
+      "source": "Hydraulic Institute / vendor (<=10 starts/h typical) (textbook)",
+      "verified": false
+    },
+    "ps_solids_passage": {
+      "desc": "Raw wastewater pump solids passage",
+      "unit": "in",
+      "min": 3,
+      "kind": "limit",
+      "source": "10SS-2014 42.33",
+      "verified": true
+    },
+    "ps_emergency_storage": {
+      "desc": "Emergency storage at peak hourly flow (>=100,000 gpd) if no standby power",
+      "unit": "h",
+      "min": 2,
+      "kind": "info",
+      "source": "MO-10CSR20-8.130(8)(A)",
+      "verified": true
+    },
+    "hyd_freeboard": {
+      "desc": "Freeboard above peak HGL in open tanks/channels",
+      "unit": "in",
+      "min": 18,
+      "kind": "typical",
+      "source": "IL-35IAC370 370.920(e)(3) (aeration tanks)",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,351 @@
+{
+ "source": "SC R.61-67 Appendix A, Unit Contributory Loadings to Domestic Wastewater Treatment Facilities (via Justia; verify against current SCDES copy)",
+ "verified": true,
+ "items": [
+  {
+   "type": "Airport",
+   "unit": "Per employee",
+   "gpd": 8.0
+  },
+  {
+   "type": "Airport",
+   "unit": "Per passenger",
+   "gpd": 4.0
+  },
+  {
+   "type": "Apartments, Condominiums, Patio Homes",
+   "unit": "3 bedrooms (per unit)",
+   "gpd": 300.0
+  },
+  {
+   "type": "Apartments, Condominiums, Patio Homes",
+   "unit": "2 bedrooms (per unit)",
+   "gpd": 225.0
+  },
+  {
+   "type": "Apartments, Condominiums, Patio Homes",
+   "unit": "1 bedroom (per unit)",
+   "gpd": 150.0
+  },
+  {
+   "type": "Assembly Halls",
+   "unit": "Per seat",
+   "gpd": 4.0
+  },
+  {
+   "type": "Barber Shop",
+   "unit": "Per employee",
+   "gpd": 8.0
+  },
+  {
+   "type": "Barber Shop",
+   "unit": "Per chair",
+   "gpd": 75.0
+  },
+  {
+   "type": "Bars, Taverns",
+   "unit": "Per employee",
+   "gpd": 8.0
+  },
+  {
+   "type": "Bars, Taverns",
+   "unit": "Per seat, excluding restaurant",
+   "gpd": 30.0
+  },
+  {
+   "type": "Beauty Shop",
+   "unit": "Per employee",
+   "gpd": 8.0
+  },
+  {
+   "type": "Beauty Shop",
+   "unit": "Per chair",
+   "gpd": 94.0
+  },
+  {
+   "type": "Boarding House, Dormitory",
+   "unit": "Per resident",
+   "gpd": 38.0
+  },
+  {
+   "type": "Bowling Alley",
+   "unit": "Per employee",
+   "gpd": 8.0
+  },
+  {
+   "type": "Bowling Alley",
+   "unit": "Per lane, no restaurant, bar, or lounge",
+   "gpd": 94.0
+  },
+  {
+   "type": "Camps",
+   "unit": "Resort, luxury (per person)",
+   "gpd": 75.0
+  },
+  {
+   "type": "Camps",
+   "unit": "Summer (per person)",
+   "gpd": 38.0
+  },
+  {
+   "type": "Camps",
+   "unit": "Day, with central bathhouse (per person)",
+   "gpd": 26.0
+  },
+  {
+   "type": "Camps",
+   "unit": "Travel trailer (per site)",
+   "gpd": 131.0
+  },
+  {
+   "type": "Car Wash",
+   "unit": "Per car washed",
+   "gpd": 56.0
+  },
+  {
+   "type": "Churches",
+   "unit": "Per seat",
+   "gpd": 2.0
+  },
+  {
+   "type": "Clinics, Doctor's Office",
+   "unit": "Per employee",
+   "gpd": 11.0
+  },
+  {
+   "type": "Clinics, Doctor's Office",
+   "unit": "Per patient",
+   "gpd": 4.0
+  },
+  {
+   "type": "Country Club, Fitness Center, Spa",
+   "unit": "Per member",
+   "gpd": 38.0
+  },
+  {
+   "type": "Dentist Office",
+   "unit": "Per employee",
+   "gpd": 11.0
+  },
+  {
+   "type": "Dentist Office",
+   "unit": "Per chair",
+   "gpd": 6.0
+  },
+  {
+   "type": "Dentist Office",
+   "unit": "Per suction unit; standard unit",
+   "gpd": 278.0
+  },
+  {
+   "type": "Dentist Office",
+   "unit": "Per suction unit; recycling unit",
+   "gpd": 71.0
+  },
+  {
+   "type": "Dentist Office",
+   "unit": "Per suction unit; air generated unit",
+   "gpd": 0.0
+  },
+  {
+   "type": "Factories, Industries",
+   "unit": "Per employee",
+   "gpd": 19.0
+  },
+  {
+   "type": "Factories, Industries",
+   "unit": "Per employee, with showers",
+   "gpd": 26.0
+  },
+  {
+   "type": "Factories, Industries",
+   "unit": "Per employee, with kitchen",
+   "gpd": 30.0
+  },
+  {
+   "type": "Factories, Industries",
+   "unit": "Per employee, with showers and kitchen",
+   "gpd": 34.0
+  },
+  {
+   "type": "Fairgrounds",
+   "unit": "Average attendance, per person",
+   "gpd": 4.0
+  },
+  {
+   "type": "Grocery Stores",
+   "unit": "Per person, no restaurant or food preparation",
+   "gpd": 19.0
+  },
+  {
+   "type": "Hospitals",
+   "unit": "Per resident staff",
+   "gpd": 75.0
+  },
+  {
+   "type": "Hospitals",
+   "unit": "Per bed",
+   "gpd": 150.0
+  },
+  {
+   "type": "Hotels",
+   "unit": "Per bedroom, no restaurant",
+   "gpd": 75.0
+  },
+  {
+   "type": "Institutions",
+   "unit": "Per resident",
+   "gpd": 75.0
+  },
+  {
+   "type": "Laundries",
+   "unit": "Self service, per machine",
+   "gpd": 300.0
+  },
+  {
+   "type": "Marinas",
+   "unit": "Per slip",
+   "gpd": 23.0
+  },
+  {
+   "type": "Mobile Homes",
+   "unit": "Per unit",
+   "gpd": 225.0
+  },
+  {
+   "type": "Motels",
+   "unit": "Per unit, no restaurant",
+   "gpd": 75.0
+  },
+  {
+   "type": "Nursing Homes",
+   "unit": "Per bed",
+   "gpd": 75.0
+  },
+  {
+   "type": "Nursing Homes",
+   "unit": "Per bed, with laundry",
+   "gpd": 113.0
+  },
+  {
+   "type": "Offices, Small Stores, Business, Administration Buildings",
+   "unit": "Per person, no restaurant",
+   "gpd": 19.0
+  },
+  {
+   "type": "Picnic Parks",
+   "unit": "Average attendance, per person",
+   "gpd": 8.0
+  },
+  {
+   "type": "Prison/Jail",
+   "unit": "Per employee",
+   "gpd": 11.0
+  },
+  {
+   "type": "Prison/Jail",
+   "unit": "Per inmate",
+   "gpd": 94.0
+  },
+  {
+   "type": "Residences",
+   "unit": "Per house, unit",
+   "gpd": 300.0
+  },
+  {
+   "type": "Rest Areas, Welcome Centers",
+   "unit": "Per person",
+   "gpd": 4.0
+  },
+  {
+   "type": "Rest Areas, Welcome Centers",
+   "unit": "Per person, with showers",
+   "gpd": 8.0
+  },
+  {
+   "type": "Rest Homes",
+   "unit": "Per bed",
+   "gpd": 75.0
+  },
+  {
+   "type": "Rest Homes",
+   "unit": "Per bed, with laundry",
+   "gpd": 113.0
+  },
+  {
+   "type": "Restaurants",
+   "unit": "Fast food type, not 24 hours (per seat)",
+   "gpd": 30.0
+  },
+  {
+   "type": "Restaurants",
+   "unit": "24-hour restaurant (per seat)",
+   "gpd": 53.0
+  },
+  {
+   "type": "Restaurants",
+   "unit": "Drive-in (per car service space)",
+   "gpd": 30.0
+  },
+  {
+   "type": "Restaurants",
+   "unit": "Vending machine, walk-up deli, or food preparation (per person)",
+   "gpd": 30.0
+  },
+  {
+   "type": "Schools, Day Care",
+   "unit": "Per person",
+   "gpd": 8.0
+  },
+  {
+   "type": "Schools, Day Care",
+   "unit": "Per person, with cafeteria",
+   "gpd": 11.0
+  },
+  {
+   "type": "Schools, Day Care",
+   "unit": "Per person, with cafeteria, gym, and showers",
+   "gpd": 15.0
+  },
+  {
+   "type": "Service Stations",
+   "unit": "Per employee",
+   "gpd": 8.0
+  },
+  {
+   "type": "Service Stations",
+   "unit": "Per car served",
+   "gpd": 8.0
+  },
+  {
+   "type": "Service Stations",
+   "unit": "Car wash (per car washed)",
+   "gpd": 56.0
+  },
+  {
+   "type": "Shopping Centers, Large Department Stores, Malls",
+   "unit": "Per person, no restaurant",
+   "gpd": 19.0
+  },
+  {
+   "type": "Stadiums, Coliseums",
+   "unit": "Per seat, no restaurant",
+   "gpd": 4.0
+  },
+  {
+   "type": "Swimming Pools",
+   "unit": "Per person, with sewer facilities and showers",
+   "gpd": 8.0
+  },
+  {
+   "type": "Theaters",
+   "unit": "Indoor (per seat)",
+   "gpd": 4.0
+  },
+  {
+   "type": "Theaters",
+   "unit": "Drive-in (per stall)",
+   "gpd": 4.0
+  }
+ ]
+}

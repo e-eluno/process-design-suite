@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.spec
+*.egg-info/
+.DS_Store
+Thumbs.db
+# generated reports (keep the committed sample in examples/)
+*_report.html
+!examples/sample_report_5mgd_mle.html
